@@ -4,13 +4,22 @@ class FormValidator {
     this._settings = settings;
   }
 
+  // Public
   enableValidation() {
     this._formElement.addEventListener("submit", (evt) => {
       evt.preventDefault();
     });
     this._setEventListeners();
   }
+  resetValidation() {
+    // reset form input
+    this._formElement.reset();
+    // disable submit button
+    this._buttonElement.classList.add(this._settings.inactiveButtonClass);
+    this._buttonElement.disabled = true;
+  }
 
+  // Private
   _setEventListeners() {
     this._inputList = Array.from(
       this._formElement.querySelectorAll(this._settings.inputSelector)
