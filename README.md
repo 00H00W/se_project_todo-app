@@ -1,17 +1,31 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+**Sam Branham**
+
+A bare-bones todo list application.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This project features:
+
+- Adding / Removing multiple custom entiries
+- Optional due date reminder
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+### HTML
+
+- Template elements
+- Form elements
+
+### Javascript
+
+- OOP principles such as encapsulation
+- Form validation
+- DOM manipulation
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+- [link](https://00h00w.github.io/se_project_todo-app/)
