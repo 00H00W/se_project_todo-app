@@ -1,7 +1,7 @@
 class Popup {
   constructor({ popupSelector }) {
     this._popupElement = document.querySelector(popupSelector);
-    this._addTodoCloseBtn = this._popupElement.querySelector(".popup__close");
+    this._closeBtn = this._popupElement.querySelector(".popup__close");
   }
 
   _handleEscapeClose = (evt) => {
@@ -21,10 +21,7 @@ class Popup {
 
   setEventListeners() {
     this._popupElement.addEventListener("mousedown", (evt) => {
-      if (
-        evt.target === this._popupElement ||
-        evt.target === this._addTodoCloseBtn
-      )
+      if (evt.target === this._popupElement || evt.target === this._closeBtn)
         this.close();
     });
   }
