@@ -1,7 +1,9 @@
 class Todo {
-  constructor(data, templateSelector) {
+  constructor(data, templateSelector, handleCheck, handleDelete) {
     this._data = data;
     this._template = document.querySelector(templateSelector);
+    this._handleCheck = handleCheck;
+    this._handleDelete = handleDelete;
   }
 
   getView() {
@@ -23,6 +25,7 @@ class Todo {
     this._todoElement
       .querySelector(".todo__delete-btn")
       .addEventListener("click", () => {
+        this._handleDelete(this._data.completed);
         this._todoElement.remove();
       });
     // Check Box
@@ -30,6 +33,7 @@ class Todo {
       .querySelector(".todo__completed")
       .addEventListener("change", () => {
         this._data.completed = !this._data.completed;
+        this._handleCheck(this._data.completed);
       });
     return this;
   }
