@@ -3,8 +3,6 @@ class Section {
     this._items = items;
     this._renderer = renderer;
     this._containerElement = document.querySelector(containerSelector);
-
-    this.renderItems();
   }
 
   renderItems() {
