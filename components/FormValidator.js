@@ -15,8 +15,7 @@ class FormValidator {
     // reset form input
     this._formElement.reset();
     // disable submit button
-    this._buttonElement.classList.add(this._settings.inactiveButtonClass);
-    this._buttonElement.disabled = true;
+    this._toggleButtonState();
   }
 
   // Private
