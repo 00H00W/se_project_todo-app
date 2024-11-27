@@ -5,9 +5,7 @@ class Popup {
   }
 
   _handleEscapeClose = (evt) => {
-    console.log(evt.key);
     if (evt.key === "Escape") {
-      console.log(this);
       this.close();
     }
   };
